@@ -22,10 +22,9 @@ repo. If you are about to create `ICEES/...` or `DeN/...` here, you are in the w
 - `orion-embed.css` — styles that wrapper, and nothing else.
 - `template.html` — the rendered styleguide: every component with its exact markup. Read it before
   authoring a page, rather than reproducing markup from memory.
-- `orion.css`, `orion.js` — **legacy duplicates of OrionCSS, kept alive only because the 132 pages
-  in `tdmts/Microcontrollers` still link them by absolute URL.** Do not edit them, and do not link
-  them from new pages. They are frozen copies pending those pages being repointed at OrionCSS, after
-  which they are deleted. Any fix belongs in `OrionCSS/style.css` or `OrionCSS/main.js`.
+There are deliberately no stylesheet or script files here beyond `orion-embed.css`. `orion.css` and
+`orion.js` used to live here as duplicates of OrionCSS and have been deleted — never reintroduce
+them. A styling fix belongs in `OrionCSS/style.css` or `OrionCSS/main.js`.
 
 ## Writing a content page
 
@@ -37,10 +36,9 @@ header or footer, no assumptions about a parent document.
 
 ## Editing template.html
 
-`template.html` links `orion.css` and `orion.js` **relatively**, because they sit beside it in this
-repo. That is the one legitimate use of a relative path — but it means the styleguide currently
-renders against the frozen copies, not against OrionCSS. When Microcontrollers is repointed and the
-copies are deleted, switch these to the absolute OrionCSS URLs in the same commit.
+`template.html` links `https://tdmts.github.io/OrionCSS/style.css` and `.../main.js` by absolute
+URL, exactly like a real content page, so it renders against the same CSS students get and its
+`<head>` is safe to copy.
 
 A component added to OrionCSS must be documented here in the same change. A component absent from
 `template.html` does not exist.
