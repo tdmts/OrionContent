@@ -299,6 +299,33 @@ Reading package lists... Done</pre>
                 </div>
             </div>
 
+            <!-- Vragenlijst -->
+            <h2 id="vragenlijst">Vragenlijst</h2>
+            <p>Het antwoord staat bij de vraag: <code>class="juist"</code> op de juiste mogelijkheid, en een <code>&lt;div class="oplossing"&gt;</code> met de toelichting of het antwoord op een open vraag. <code>main.js</code> maakt er een spoiler van en telt de letter zelf.</p>
+            <ol class="vragen">
+                <li>Welke laag van het OSI-model routeert pakketten?
+                    <ul>
+                        <li>De datalinklaag</li>
+                        <li class="juist">De netwerklaag</li>
+                        <li>De transportlaag</li>
+                    </ul>
+                    <div class="oplossing">Een router kijkt naar het IP-adres, en dat hoort bij laag 3.</div>
+                </li>
+                <li>Hoeveel hosts passen in een /24-netwerk?
+                    <div class="oplossing">254: 256 adressen min het netwerkadres en het broadcastadres.</div>
+                </li>
+            </ol>
+
+            <!-- Oplossing -->
+            <h2 id="oplossing">Oplossing</h2>
+            <p>De oplossing van een oefening, alleen onder een <code>&lt;h2 id="oplossing..."&gt;</code>. De knop gaat maar één kant op; wat weer dicht moet kunnen, is een accordion-item.</p>
+            <div class="solution-container">
+                <button type="button" class="btn-spoiler solution-reveal-btn">Toon oplossing</button>
+                <div class="spoiler-content solution-content">
+                    <p>Hier staat de uitgewerkte oplossing.</p>
+                </div>
+            </div>
+
             <!-- STL Viewer -->
             <h2 id="stl-viewer">STL Viewer</h2>
             <p>Hieronder wordt het bestand <code>bolt.stl</code> weergegeven met behulp van de nieuwe STL viewer functionaliteit.</p>
